@@ -6,12 +6,13 @@ import TableBody from '../TableBody/TableBody';
 import './Main.css';
 
 class Main extends Component {
-
+    
     constructor() {
         super();
         this.state = {
-            user: [],
-            error: null
+            users: [],
+            error: null,
+            order: true
         };
     };
 
@@ -27,9 +28,9 @@ class Main extends Component {
             })
             .then(data => {
 
-                let user = data.results
+                let users = data.results
 
-                this.setState({user: user});
+                this.setState({users: users});
             });
         }
         catch(error) {
@@ -37,24 +38,98 @@ class Main extends Component {
         };
     };
 
+
+    sortByName = () => {
+            this.setState({
+              users: this.state.order
+                ? this.state.users.sort((a, b) => {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            })
+                : this.state.users.reverse((a, b) => {
+                if (a.name < b.name) return 1;
+                if (a.name > b.name) return -1;
+                return 0;
+            }),
+              order: !this.state.order,
+            });
+        }
+
+    sortByPhone = () => {
+        this.setState({
+            users: this.state.order
+            ? this.state.users.sort((a, b) => {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a, b) => {
+            if (a.name < b.name) return 1;
+            if (a.name > b.name) return -1;
+            return 0;
+        }),
+            order: !this.state.order,
+        });
+    }
+
+    sortByEmail = () => {
+        this.setState({
+            users: this.state.order
+            ? this.state.users.sort((a, b) => {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a, b) => {
+            if (a.name < b.name) return 1;
+            if (a.name > b.name) return -1;
+            return 0;
+        }),
+            order: !this.state.order,
+        });
+    }
+
+    sortByDob = () => {
+        this.setState({
+            users: this.state.order
+            ? this.state.users.sort((a, b) => {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a, b) => {
+            if (a.name < b.name) return 1;
+            if (a.name > b.name) return -1;
+            return 0;
+        }),
+            order: !this.state.order,
+        });
+    }
+
     render() {
 
         return (
             <div>
                 <Title/>
                 <Search/>
-                <div class ='container'>
-                    <table class="table table-striped">
-                        <TableHead/>
+                <div className='container'>
+                    <table className="table table-striped">
+                        <TableHead
+                        sortByName={this.sortByName}
+                        sortByPhone={this.sortByPhone}
+                        sortByEmail={this.sortByEmail}
+                        sortByDob={this.sortByDob}
+                        />
                         <tbody>
-                            {this.state.user.map(users => (                           
+                            {this.state.users.map(user => (                           
                                 <TableBody
-                                key={users.name.first + ' ' + users.name.last}
-                                image={users.picture.large}
-                                name={users.name.first + ' ' + users.name.last}
-                                phone={users.cell}
-                                email={users.email}
-                                dob={users.dob.date}
+                                key={user.name.first + ' ' + user.name.last}
+                                image={user.picture.large}
+                                name={user.name.first + ' ' + user.name.last}
+                                phone={user.cell}
+                                email={user.email}
+                                dob={user.dob.date}
                                 />                            
                             ))}
                         </tbody>
@@ -66,9 +141,3 @@ class Main extends Component {
 };
 
 export default Main;
-
-// input
-// function onChange of input
-// take a paramter of what the user is inputting 
-// e.target.value
-// filter method
