@@ -12,16 +12,16 @@ class Main extends Component {
         this.state = {
             user: [],
             error: null
-        }
-    }
+        };
+    };
 
     componentDidMount() {
         this.fetchRandomUser();        
-    }
+    };
 
     fetchRandomUser = async() => {
         try {
-            await fetch('https://randomuser.me/api/?results=5&inc=id,picture,name,cell,email,dob')
+            await fetch('https://randomuser.me/api/?results=20&inc=id,picture,name,cell,email,dob')
             .then(results => {
                 return results.json();
             })
@@ -34,8 +34,8 @@ class Main extends Component {
         }
         catch(error) {
             this.setState({ error: error});
-        }
-    }
+        };
+    };
 
     render() {
 
@@ -46,25 +46,29 @@ class Main extends Component {
                 <div class ='container'>
                     <table class="table table-striped">
                         <Results/>
-
-                        
-                        {this.state.user.map(users => (
-                            
-                            <ApiCall
-                            key={users.id.value}
-                            image={users.picture.large}
-                            name={users.name.first + ' ' + users.name.last}
-                            phone={users.cell}
-                            email={users.email}
-                            dob={users.dob.date}
-                            />
-                            
-                        ))}
+                        <tbody>
+                            {this.state.user.map(users => (                           
+                                <ApiCall
+                                key={users.name.first + ' ' + users.name.last}
+                                image={users.picture.large}
+                                name={users.name.first + ' ' + users.name.last}
+                                phone={users.cell}
+                                email={users.email}
+                                dob={users.dob.date}
+                                />                            
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Main;
+
+// input
+// function onChange of input
+// take a paramter of what the user is inputting 
+// e.target.value
+// filter method
