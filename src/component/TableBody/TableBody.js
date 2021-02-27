@@ -10,7 +10,7 @@ function formatDate(date) {
     return formattedDate;
   }
 
-function ApiCall (props) {
+function TableBody (props) {
     return (
             <tr>
             <th scope='row'><img src={props.image} alt={props.name}/></th>
@@ -22,4 +22,4 @@ function ApiCall (props) {
     )
 }
 
-export default ApiCall;
+export default TableBody;
