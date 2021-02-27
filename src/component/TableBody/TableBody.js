@@ -8,7 +8,7 @@ function formatDate(date) {
     const day = dayArray[0];
     const formattedDate = [month, day, year].join("-");
     return formattedDate;
-  }
+  };
 
 function TableBody (props) {
     return (
@@ -20,6 +20,6 @@ function TableBody (props) {
             <td>{formatDate(props.dob)}</td>
             </tr>
     )
-}
+};
 
 export default TableBody;

@@ -3,9 +3,9 @@ import './Search.css';
 
 function Search() {
     return ( 
-      <div class='container search-container'>
-      <div class="form-outline">
-      <input type="search" id="form1" class="form-control" placeholder="Search"
+      <div className='container search-container'>
+      <div className="form-outline">
+      <input type="search" id="form1" className="form-control" placeholder="Search"
        aria-label="Search" />
       </div>
       </div>
