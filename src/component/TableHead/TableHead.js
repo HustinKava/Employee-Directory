@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Results () {
+function TableHead () {
     return (
 
             <thead>
@@ -16,4 +16,4 @@ function Results () {
     )
 }
 
-export default Results
+export default TableHead;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Title from '../Title/Title';
 import Search from '../Search/Search';
-import Results from '../Results/Results';
-import ApiCall from '../ApiCall/ApiCall';
+import TableHead from '../TableHead/TableHead';
+import TableBody from '../TableBody/TableBody';
 import './Main.css';
 
 class Main extends Component {
@@ -45,10 +45,10 @@ class Main extends Component {
                 <Search/>
                 <div class ='container'>
                     <table class="table table-striped">
-                        <Results/>
+                        <TableHead/>
                         <tbody>
                             {this.state.user.map(users => (                           
-                                <ApiCall
+                                <TableBody
                                 key={users.name.first + ' ' + users.name.last}
                                 image={users.picture.large}
                                 name={users.name.first + ' ' + users.name.last}
