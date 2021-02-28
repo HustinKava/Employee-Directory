@@ -5,7 +5,8 @@ const style = {
     margin: '10px 5px'
 }
 
-function TableHead ({sortByName}) {
+// Destructuring the functions we passed from Main.js
+function TableHead ({sortByName, sortByPhone, sortByEmail, sortByDob}) {
 
 
 
@@ -14,10 +15,11 @@ function TableHead ({sortByName}) {
             <thead>
                 <tr>
                 <th scope="col">Image</th>
-                <th scope="col">Name<span onClick={sortByName}  className="caret" style={style}></span></th>
-                <th scope="col">Phone<span className="caret" style={style}></span></th>
-                <th scope="col">Email<span className="caret" style={style}></span></th>
-                <th scope="col">DOB<span className="caret" style={style}></span></th>
+                {/* Calling our functions in the arrow icon span tags */}
+                <th scope="col">Name<span onClick={() => sortByName()}  className="caret" style={style}></span></th>
+                <th scope="col">Phone<span onClick={() => sortByPhone()} className="caret" style={style}></span></th>
+                <th scope="col">Email<span onClick={() => sortByEmail()} className="caret" style={style}></span></th>
+                <th scope="col">DOB<span onClick={() => sortByDob()} className="caret" style={style}></span></th>
                 </tr>
             </thead>
 
