@@ -16,7 +16,7 @@ When this application is launched, the home page automatically performs an API c
 - [License](#License)
 
 ## Technologies Used
-For this application I used the following technologies: React, JavaScript HTML/CSS, Bootstrap, Heroku and GitHub pages.
+For this application I used the following technologies: React, JavaScript HTML/CSS, Bootstrap, Heroku and GitHub Pages.
 
 ## Installation
 This application is easy to install, just clone the repository and run the following command in your terminal. 
