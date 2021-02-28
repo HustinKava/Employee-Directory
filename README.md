@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Employee-Directory
+![License](https://img.shields.io/badge/License%3A-MIT-darkgreen.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+For unit 19's homework assignment I had to create an employee directory using React! This was a difficult assignment and I found it very challenging. I am happy with the end result considering we have been using React for 1 week. 
 
-## Available Scripts
+When this application is launched, the home page automatically performs an API call and renders a list of 20 users within a Bootstrap table. Users are then able to filter by first name. Users are then able to sort alphabetically by both ascending and descending order for Name, Phone, Email and DOB.
 
-In the project directory, you can run:
+## Table Of Contents
+- [Technologies](#Technologies-Used)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Screenshots](#Screenshots)
+- [View Live Website](#View-Live-Website)
+- [Questions](#Questions)
+- [License](#License)
 
-### `npm start`
+## Technologies Used
+For this application I used the following technologies: React, JavaScript HTML/CSS, Bootstrap, Heroku and GitHub Pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+This application is easy to install, just clone the repository and run the following command in your terminal. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+This will create the node modules folder you will need in order for this application to function correctly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+In order to get this application to run you must open up the terminal and enter the following:
 
-### `npm run build`
+```
+npm start
+```
+The application will then console log the URL in the terminal and React automatically opens the app in your default browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+Rendered homepage
+![](public/images/Screenshot1.PNG)
+Filtered users
+![](public/images/Screenshot2.PNG)
+Filtered users that have been sorted Alphabetically
+![](public/images/Screenshot3.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## View Live Website  
+Please click **[Here](https://rocky-temple-86306.herokuapp.com/)** to view the live webpage hosted on Heroku
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please click **[Here](https://hustinkava.github.io/Employee-Directory/)** to view the live webpage hosted on GitHub pages
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Questions
+To view my other repositories or to connect with me on GitHub please click **[Here](https://github.com/HustinKava/)**
+If you have any questions please feel free to reach out to me at the following email: *hkavafsd@gmail.com*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+![License](https://img.shields.io/badge/License%3A-MIT-darkgreen.svg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
